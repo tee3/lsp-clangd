@@ -40,4 +40,4 @@
 
 (provide 'lsp-clangd)
 
-;;; lsp-clangd ends here
+;;; lsp-clangd.el ends here
