@@ -24,22 +24,30 @@
 (lsp-define-stdio-client lsp-clangd-c++
                          "cpp"
                          (lsp-make-traverser "compile_commands.json")
-                         (list lsp-clangd-executable))
+                         (list lsp-clangd-executable)
+                         :ignore-regexps
+                         '("^Error -[0-9]+: .+$"))
 
 (lsp-define-stdio-client lsp-clangd-c
                          "c"
                          (lsp-make-traverser "compile_commands.json")
-                         (list lsp-clangd-executable))
+                         (list lsp-clangd-executable)
+                         :ignore-regexps
+                         '("^Error -[0-9]+: .+$"))
 
 (lsp-define-stdio-client lsp-clangd-objc
                          "objective-c"
                          (lsp-make-traverser "compile_commands.json")
-                         (list lsp-clangd-executable))
+                         (list lsp-clangd-executable)
+                         :ignore-regexps
+                         '("^Error -[0-9]+: .+$"))
 
 (lsp-define-stdio-client lsp-clangd-objc++
                          "objective-cpp"
                          (lsp-make-traverser "compile_commands.json")
-                         (list lsp-clangd-executable))
+                         (list lsp-clangd-executable)
+                         :ignore-regexps
+                         '("^Error -[0-9]+: .+$"))
 
 (provide 'lsp-clangd)
 
